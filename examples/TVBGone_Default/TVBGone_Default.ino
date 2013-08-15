@@ -1,7 +1,9 @@
 /*
-TV-B-Gone for Arduino version 1.2, Oct 23 2010
+TV-B-Gone for Arduino version 1.2h, Aug 14 2013
 Ported to Arduino by Ken Shirriff=
 http://www.arcfn.com/2009/12/tv-b-gone-for-arduino.html
+Adapted as library for Arduino 1.x by Haoji=
+https://github.com/haoji/Arduino-TV-B-Gone
 
 The hardware for this project uses an Arduino:
  Connect an IR LED to pin 3 (RLED).
@@ -30,7 +32,7 @@ TV-B-Gone Firmware version 1.2
 
  */
 
-#include "main.h"
+#include <TVBGone.h>
 #include <avr/sleep.h>
 
 void xmitCodeElement(uint16_t ontime, uint16_t offtime, uint8_t PWM_code );
@@ -453,3 +455,4 @@ void wakeUpNow()
 {
   // any needed wakeup code can be placed here
 }
+
